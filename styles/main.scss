@@ -1,0 +1,411 @@
+@import 'variables.scss';
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+}
+
+body {
+  background-color: $gray;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1110px;
+  width: 100%;
+}
+
+.header {
+  background-color: white;
+  &__top-navbar {
+    background-color: $gray;
+    padding: 1.7rem 0;
+    font-size: 1.4rem;
+    color: $dark;
+
+    ul {
+      @include flex-center;
+      gap: 3rem;
+
+      a {
+        transition: all 0.3s ease-out;
+
+        &:hover {
+          color: $accent;
+        }
+      }
+    }
+  }
+
+  &__info {
+    border-bottom: 0.1rem solid $gray ;
+
+    .container {
+      @include flex-center-between;
+      padding: 2rem 0;
+    }
+    
+    .logo {
+      @include flex-center;
+      gap: 2rem;
+      cursor: pointer;
+      transition: all 1s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      img {
+        width: 8rem;
+      }
+
+      &-text {
+        color: $accent;
+        font-size: 3.6rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+
+    .contacts {
+      @include flex-center;
+      gap: 4rem;
+
+      &__phone {
+        font-size: 1.6rem;
+        color: black;
+        cursor: pointer;
+      }
+
+      &__btn {
+        @include bordered-btn($accent, black, white);
+      }
+    }
+  }
+
+  &__navbar {
+    padding: 3rem 0;
+    font-size: 1.6rem;
+    color: black;
+  }
+
+  ul {
+    @include flex-center;
+    gap: 4rem;
+
+    a {
+      transition: all 0.3s ease-out;
+
+      &:hover {
+        color: $accent;
+      }
+    }
+  }
+}
+
+.promo {
+  background-color: $accent;
+  padding-top: 2rem;
+  overflow: hidden;
+  margin-bottom: 8rem;
+
+  .container {
+    @include flex-center-left;
+    gap: 10rem;
+  }
+
+  &__info {
+    @include flex-column-left;
+    gap: 5rem;
+    color: white;
+
+    &-title {
+      font-size: 4.8rem;
+      font-weight: 700;
+    }
+
+    &-text {
+      font-size: 1.4rem;
+      width: 31rem;
+      line-height: 2rem;
+    }
+
+    &-btn {
+      @include bordered-btn(white, white, $accent);
+    }
+  }
+
+  &__img {
+    position: relative;
+
+    img {
+      z-index: 3;
+      position: relative;
+    }
+
+    &::before {
+      content: '';
+      width: 67.7rem;
+      height: 67.7rem;
+      background-color:  rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+      position: absolute;
+      top: -8%;
+      right: -10%;
+    }
+
+    &::after {
+      content: '';
+      width: 85.9rem;
+      height: 85.9rem;
+      background-color:  rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      position: absolute;
+      top: -23%;
+      right: -25%;
+    }
+  }
+}
+
+.offers {
+  margin-bottom: 10rem;
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color:black;
+    margin-bottom: 4rem;
+  }
+
+  &__products::after {
+    content: url('../assets/icons/car_ico.png');
+    position: absolute;
+    right:0;
+    top: -25%;
+  }
+
+  &__products {
+    @include flex-center-between;
+    position: relative;
+
+    .product {
+      background-color: white;
+      padding: 2.5rem 3rem;
+      @include flex-column-center;
+      width: 25.5rem;
+      gap: 2rem;
+
+      &-name {
+        color: $dark;
+        font-size: 1.4rem;
+        text-align: center;
+      }
+
+      &-price {
+        color: black;
+        font-size: 2.1rem;
+        font-weight: 500;
+        text-align: center;
+      }
+
+      &-btn {
+        @include full-btn($accent, white, $dark);
+      }
+    }
+  }
+}
+
+.shop-info {
+  margin-bottom: 13rem;
+
+  .container {
+    @include flex-center-between;
+  }
+
+  &__bonuses {
+    width: 54rem;
+    padding: 3.5rem 4rem;
+    background-color: $accent;
+    @include flex-center;
+    gap:6.5rem;
+
+    .bonuses__info {
+      width: 25rem;
+      @include flex-column-left;
+      gap:2.5rem;
+      color: white;
+
+      &-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+
+      &-text {
+        font-size: 1.4rem;
+        line-height: 2rem;
+      }
+
+      &-form {
+        width: 22.5rem;
+
+        input {
+          padding: 0.9rem 2.5rem;
+          width: 100%;
+          border-radius: 3rem;
+          color: #C4C4C4;
+          font-size: 1.4rem;
+          outline: none;
+
+          &::placeholder {
+            color: #C4C4C4;
+          }
+        }
+      }
+    }
+  }
+
+  &__adresses {
+    width: 54rem;
+    padding: 3.5rem 4rem;
+    background-color: $accent;
+    @include flex-column-left;
+    gap:2.5rem;
+    color: white;
+
+    .adresses {
+      &-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+
+      &-text {
+        font-size: 1.4rem;
+        line-height: 2rem;
+      }
+
+      &-btn {
+        @include bordered-btn(white, white, $accent);
+        padding: 0.8rem 0;
+      }
+    }
+  }
+}
+
+.footer {
+  &__contacts {
+    background-color: white;
+    padding: 4rem 0;
+
+    .container {
+      @include flex-center-between;
+    }
+
+    &-sm {
+      @include flex-center;
+      gap: 2rem;
+
+      .sm-ico {
+        width: 4.5rem;
+        height: 4.5rem;
+        border: 1px solid $accent;
+        border-radius: 50%;
+        display: block;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+
+      .fb {
+        background: no-repeat center url('../assets/icons/facebook_ico.svg');
+      }
+
+      .yt {
+        background: no-repeat center url('../assets/icons/youtube_ico.svg');
+      }
+
+      .vk {
+        background: no-repeat center url('../assets/icons/vk_ico.svg');
+      }
+
+      .inst {
+        background: no-repeat center url('../assets/icons/instagram_ico.svg');
+      }
+    }
+
+    &-adress {
+      font-size: 1.4rem;
+      color: black;
+    }
+
+    &-phone {
+      @include flex-center;
+      gap: 4rem;
+
+      .phone-number {
+        font-size: 1.6rem;
+        color: black;
+      }
+
+      .phone-btn {
+        @include bordered-btn($accent, black, white);
+      }
+    }
+  }
+
+  &__info {
+    color: #828282;
+    font-size: 1.2rem;
+    padding: 2.5rem 0;
+
+    .container {
+      @include flex-center-between;
+    }
+  }
+}

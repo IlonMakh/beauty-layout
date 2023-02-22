@@ -1,0 +1,452 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+}
+
+body {
+  background-color: #EFEFEF;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1110px;
+  width: 100%;
+}
+
+.header {
+  background-color: white;
+}
+.header__top-navbar {
+  background-color: #EFEFEF;
+  padding: 1.7rem 0;
+  font-size: 1.4rem;
+  color: #333333;
+}
+.header__top-navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.header__top-navbar ul a {
+  transition: all 0.3s ease-out;
+}
+.header__top-navbar ul a:hover {
+  color: #66C05D;
+}
+.header__info {
+  border-bottom: 0.1rem solid #EFEFEF;
+}
+.header__info .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+.header__info .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+.header__info .logo:hover {
+  transform: scale(1.05);
+}
+.header__info .logo img {
+  width: 8rem;
+}
+.header__info .logo-text {
+  color: #66C05D;
+  font-size: 3.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.header__info .contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+.header__info .contacts__phone {
+  font-size: 1.6rem;
+  color: black;
+  cursor: pointer;
+}
+.header__info .contacts__btn {
+  width: 17rem;
+  padding: 1.2rem 0;
+  text-align: center;
+  font-size: 1.4rem;
+  color: black;
+  border: 1px solid #66C05D;
+  border-radius: 4rem;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.header__info .contacts__btn:hover {
+  background-color: #66C05D;
+  color: white;
+}
+.header__navbar {
+  padding: 3rem 0;
+  font-size: 1.6rem;
+  color: black;
+}
+.header ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+.header ul a {
+  transition: all 0.3s ease-out;
+}
+.header ul a:hover {
+  color: #66C05D;
+}
+
+.promo {
+  background-color: #66C05D;
+  padding-top: 2rem;
+  overflow: hidden;
+  margin-bottom: 8rem;
+}
+.promo .container {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 10rem;
+}
+.promo__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 5rem;
+  color: white;
+}
+.promo__info-title {
+  font-size: 4.8rem;
+  font-weight: 700;
+}
+.promo__info-text {
+  font-size: 1.4rem;
+  width: 31rem;
+  line-height: 2rem;
+}
+.promo__info-btn {
+  width: 17rem;
+  padding: 1.2rem 0;
+  text-align: center;
+  font-size: 1.4rem;
+  color: white;
+  border: 1px solid white;
+  border-radius: 4rem;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.promo__info-btn:hover {
+  background-color: white;
+  color: #66C05D;
+}
+.promo__img {
+  position: relative;
+}
+.promo__img img {
+  z-index: 3;
+  position: relative;
+}
+.promo__img::before {
+  content: "";
+  width: 67.7rem;
+  height: 67.7rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  position: absolute;
+  top: -8%;
+  right: -10%;
+}
+.promo__img::after {
+  content: "";
+  width: 85.9rem;
+  height: 85.9rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  position: absolute;
+  top: -23%;
+  right: -25%;
+}
+
+.offers {
+  margin-bottom: 10rem;
+}
+.offers__title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 4rem;
+}
+.offers__products::after {
+  content: url("../assets/icons/car_ico.png");
+  position: absolute;
+  right: 0;
+  top: -25%;
+}
+.offers__products {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.offers__products .product {
+  background-color: white;
+  padding: 2.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25.5rem;
+  gap: 2rem;
+}
+.offers__products .product-name {
+  color: #333333;
+  font-size: 1.4rem;
+  text-align: center;
+}
+.offers__products .product-price {
+  color: black;
+  font-size: 2.1rem;
+  font-weight: 500;
+  text-align: center;
+}
+.offers__products .product-btn {
+  width: 13rem;
+  padding: 0.9rem 0;
+  text-align: center;
+  font-size: 1.4rem;
+  color: white;
+  border: 1px solid #66C05D;
+  border-radius: 3rem;
+  background-color: #66C05D;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.offers__products .product-btn:hover {
+  background-color: transparent;
+  color: #333333;
+}
+
+.shop-info {
+  margin-bottom: 13rem;
+}
+.shop-info .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.shop-info__bonuses {
+  width: 54rem;
+  padding: 3.5rem 4rem;
+  background-color: #66C05D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6.5rem;
+}
+.shop-info__bonuses .bonuses__info {
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 2.5rem;
+  color: white;
+}
+.shop-info__bonuses .bonuses__info-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.shop-info__bonuses .bonuses__info-text {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+.shop-info__bonuses .bonuses__info-form {
+  width: 22.5rem;
+}
+.shop-info__bonuses .bonuses__info-form input {
+  padding: 0.9rem 2.5rem;
+  width: 100%;
+  border-radius: 3rem;
+  color: #C4C4C4;
+  font-size: 1.4rem;
+  outline: none;
+}
+.shop-info__bonuses .bonuses__info-form input::-moz-placeholder {
+  color: #C4C4C4;
+}
+.shop-info__bonuses .bonuses__info-form input::placeholder {
+  color: #C4C4C4;
+}
+.shop-info__adresses {
+  width: 54rem;
+  padding: 3.5rem 4rem;
+  background-color: #66C05D;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 2.5rem;
+  color: white;
+}
+.shop-info__adresses .adresses-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.shop-info__adresses .adresses-text {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+.shop-info__adresses .adresses-btn {
+  width: 17rem;
+  padding: 1.2rem 0;
+  text-align: center;
+  font-size: 1.4rem;
+  color: white;
+  border: 1px solid white;
+  border-radius: 4rem;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+  padding: 0.8rem 0;
+}
+.shop-info__adresses .adresses-btn:hover {
+  background-color: white;
+  color: #66C05D;
+}
+
+.footer__contacts {
+  background-color: white;
+  padding: 4rem 0;
+}
+.footer__contacts .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__contacts-sm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.footer__contacts-sm .sm-ico {
+  width: 4.5rem;
+  height: 4.5rem;
+  border: 1px solid #66C05D;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s ease-in-out;
+}
+.footer__contacts-sm .sm-ico:hover {
+  transform: scale(1.1);
+}
+.footer__contacts-sm .fb {
+  background: no-repeat center url("../assets/icons/facebook_ico.svg");
+}
+.footer__contacts-sm .yt {
+  background: no-repeat center url("../assets/icons/youtube_ico.svg");
+}
+.footer__contacts-sm .vk {
+  background: no-repeat center url("../assets/icons/vk_ico.svg");
+}
+.footer__contacts-sm .inst {
+  background: no-repeat center url("../assets/icons/instagram_ico.svg");
+}
+.footer__contacts-adress {
+  font-size: 1.4rem;
+  color: black;
+}
+.footer__contacts-phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+.footer__contacts-phone .phone-number {
+  font-size: 1.6rem;
+  color: black;
+}
+.footer__contacts-phone .phone-btn {
+  width: 17rem;
+  padding: 1.2rem 0;
+  text-align: center;
+  font-size: 1.4rem;
+  color: black;
+  border: 1px solid #66C05D;
+  border-radius: 4rem;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.footer__contacts-phone .phone-btn:hover {
+  background-color: #66C05D;
+  color: white;
+}
+.footer__info {
+  color: #828282;
+  font-size: 1.2rem;
+  padding: 2.5rem 0;
+}
+.footer__info .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}/*# sourceMappingURL=main.css.map */
