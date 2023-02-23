@@ -55,7 +55,8 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 1110px;
+  max-width: 115rem;
+  padding: 2rem 0;
   width: 100%;
 }
 
@@ -131,20 +132,21 @@ body {
     padding: 3rem 0;
     font-size: 1.6rem;
     color: black;
-  }
 
-  ul {
-    @include flex-center;
-    gap: 4rem;
-
-    a {
-      transition: all 0.3s ease-out;
-
-      &:hover {
-        color: $accent;
+    ul {
+      @include flex-center;
+      gap: 4rem;
+  
+      a {
+        transition: all 0.3s ease-out;
+  
+        &:hover {
+          color: $accent;
+        }
       }
     }
   }
+
 }
 
 .promo {
@@ -185,6 +187,7 @@ body {
     img {
       z-index: 3;
       position: relative;
+      width: 57rem;
     }
 
     &::before {
@@ -306,6 +309,12 @@ body {
         }
       }
     }
+
+    .bonuses__img {
+      img {
+        width: 14rem;
+      }
+    }
   }
 
   &__adresses {
@@ -407,5 +416,224 @@ body {
     .container {
       @include flex-center-between;
     }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 90rem;
+  }
+
+  .promo {
+  background-color: $accent;
+  padding-top: 2rem;
+  overflow: hidden;
+  margin-bottom: 8rem;
+
+  .container {
+    @include flex-center-left;
+    gap: 12rem;
+  }
+
+  &__img {
+
+    img {
+      width: 40rem;
+    }
+
+    &::before {
+      width: 50.7rem;
+      height: 50.7rem;
+      top:-15%;
+      right: -15%;
+    }
+
+    &::after {
+      width: 68.9rem;
+      height: 68.9rem;
+      top: -35%;
+      right: -35%;
+    }
+  }
+}
+
+.offers {
+  &__title {
+    text-align: center;
+  }
+
+  &__products::after {
+    display: none;
+  }
+
+  &__products {
+    @include flex-center;
+    gap: 2rem;
+  }
+}
+
+.shop-info {
+
+  .container {
+    @include flex-center;
+    gap: 2rem;
+  }
+}
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 8px;
+  }
+  
+  .header {
+    &__top-navbar {
+      padding: 1rem 0;
+  
+      ul {
+        gap: 2rem;
+      }
+    }
+  
+    &__info {
+  
+      .container {
+        @include flex-center;
+        gap: 2rem;
+        padding: 1rem 0;
+      }
+      
+      .logo {
+        img {
+          width: 6rem;
+        }
+      }
+  
+      .contacts {
+        gap: 2rem;
+      }
+    }
+  
+    &__navbar {
+      padding: 1rem 0;
+
+      ul {
+        @include flex-center;
+        gap: 2rem;
+      }
+    }
+  }
+
+  .promo {
+    margin-bottom: 4rem;
+
+    .container {
+      @include flex-center;
+    }
+  
+    &__info {
+      @include flex-column-center;
+      gap: 2.5rem;
+  
+      &-text {
+        text-align: center;
+      }
+    }
+  
+    &__img {
+      display: none;
+    }
+  }
+
+  .offers {
+    margin-bottom: 4rem;
+  }
+
+  .shop-info {
+    margin-bottom: 6rem;
+  
+    &__bonuses {
+  
+      .bonuses__info {
+        @include flex-column-center;
+  
+        &-title {
+          text-align: center;
+        }
+  
+        &-text {
+          text-align: center;
+        }
+      }
+  
+      .bonuses__img {
+        display: none;
+      }
+    }
+  
+    &__adresses {
+      @include flex-column-center;
+  
+      .adresses {
+        &-title {
+          text-align: center;
+        }
+  
+        &-text {
+          text-align: center
+        }
+      }
+    }
+  }
+
+  .footer {
+    &__contacts {
+      padding: 1rem 0;
+  
+      .container {
+        @include flex-center;
+        gap: 2.5rem;
+      }
+  
+      &-sm {
+        @include flex-center;
+        gap: 1rem;
+  
+        .vk, .fb, .yt, .inst {
+          background-size: 2.5rem;
+        }
+      }
+  
+      &-adress {
+        font-size: 1.4rem;
+        color: black;
+      }
+  
+      &-phone {
+        gap: 2rem;
+      }
+    }
+  
+    &__info {
+      padding: 1rem 0;
+  
+      .container {
+        @include flex-column-center;
+        gap: 1rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 7px;
   }
 }

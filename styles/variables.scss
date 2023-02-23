@@ -7,18 +7,21 @@ $dark: #333333;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 @mixin flex-center-left {
   display: flex;
   align-items: center;
   justify-content: left;
+  flex-wrap: wrap;
 }
 
 @mixin flex-center-between {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 @mixin flex-column-left {
